@@ -22,7 +22,9 @@ public class UserTest {
 		user.setPhno("987654321");
 		user.setEnabled("true");
 		user.setRole("User");
-		userDAO.saveorUpdate(user);
-		System.out.println("user created");
+		//userDAO.saveorUpdate(user);
+		userDAO.delete(user);
+		//System.out.println("user created");
+		System.out.println("user deleted");
 	}
 }

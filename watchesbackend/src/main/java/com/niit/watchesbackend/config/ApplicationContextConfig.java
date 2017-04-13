@@ -126,7 +126,7 @@ public CategoryDAO getCategoryDAO(SessionFactory sessionFactory)
 
 public Category getCategory()
 {
-	System.out.println("category");
+	System.out.println("Category");
 	return new Category();
 }
 
