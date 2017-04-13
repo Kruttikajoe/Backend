@@ -13,8 +13,14 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.watchesbackend.DAO.CategoryDAO;
+import com.niit.watchesbackend.DAO.CategoryDAOImpl;
+import com.niit.watchesbackend.DAO.SupplierDAO;
+import com.niit.watchesbackend.DAO.SupplierDAOImpl;
 import com.niit.watchesbackend.DAO.UserDAO;
 import com.niit.watchesbackend.DAO.UserDAOImpl;
+import com.niit.watchesbackend.model.Category;
+import com.niit.watchesbackend.model.Supplier;
 import com.niit.watchesbackend.model.User;
 @Configuration
 @ComponentScan("com")
@@ -52,6 +58,8 @@ public SessionFactory getSessionFactory(DataSource datasource)
 	LocalSessionFactoryBuilder sessionBuilder= new LocalSessionFactoryBuilder(datasource);
 	sessionBuilder.addProperties(getHibernateProperties());
 	sessionBuilder.addAnnotatedClass(User.class);
+	sessionBuilder.addAnnotatedClass(Supplier.class);
+	sessionBuilder.addAnnotatedClass(Category.class);
 	System.out.println("Session Factory");
 	return sessionBuilder.buildSessionFactory();
 	
@@ -84,29 +92,42 @@ public User getUser()
 	return new User();
 }
 
+@Autowired
+@Bean(name="supplierDAO")
 
+public SupplierDAO getSupplierDAO(SessionFactory sessionFactory)
+{
+	System.out.println("supplier DAO");
+	return new SupplierDAOImpl();
+	
+}
 
+@Autowired
+@Bean(name="supplier")
 
+public Supplier getSupplier()
+{
+	System.out.println("supplier");
+	return new Supplier();
+}
 
+@Autowired
+@Bean(name="categoryDAO")
 
+public CategoryDAO getCategoryDAO(SessionFactory sessionFactory)
+{
+	System.out.println("category DAO");
+	return new CategoryDAOImpl();
+	
+}
 
+@Autowired
+@Bean(name="category")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public Category getCategory()
+{
+	System.out.println("category");
+	return new Category();
+}
 
 }
