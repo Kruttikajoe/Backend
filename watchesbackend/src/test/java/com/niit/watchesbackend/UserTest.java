@@ -13,7 +13,7 @@ public class UserTest {
 		context.refresh();
 		context.getBean("user");
 		
-		UserDAO userDAO= (UserDAO)context.getBean("userDAO");
+		/*UserDAO userDAO= (UserDAO)context.getBean("userDAO");
 		User user=(User)context.getBean("user");
 		user.setUsername("user2");
 		user.setPassword("efgh");
@@ -22,9 +22,9 @@ public class UserTest {
 		user.setPhno("987654321");
 		user.setEnabled("true");
 		user.setRole("User");
-		//userDAO.saveorUpdate(user);
-		userDAO.delete(user);
+		userDAO.saveorUpdate(user);
+		//userDAO.delete(user);
 		//System.out.println("user created");
-		System.out.println("user deleted");
-	}
+		//System.out.println("user deleted");
+*/	}
 }

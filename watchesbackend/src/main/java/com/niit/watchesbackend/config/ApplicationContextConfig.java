@@ -20,6 +20,7 @@ import com.niit.watchesbackend.DAO.SupplierDAOImpl;
 import com.niit.watchesbackend.DAO.UserDAO;
 import com.niit.watchesbackend.DAO.UserDAOImpl;
 import com.niit.watchesbackend.model.Category;
+import com.niit.watchesbackend.model.Product;
 import com.niit.watchesbackend.model.Supplier;
 import com.niit.watchesbackend.model.User;
 @Configuration
@@ -60,6 +61,7 @@ public SessionFactory getSessionFactory(DataSource datasource)
 	sessionBuilder.addAnnotatedClass(User.class);
 	sessionBuilder.addAnnotatedClass(Supplier.class);
 	sessionBuilder.addAnnotatedClass(Category.class);
+	sessionBuilder.addAnnotatedClass(Product.class);
 	System.out.println("Session Factory");
 	return sessionBuilder.buildSessionFactory();
 	
