@@ -8,12 +8,11 @@
 	<name>watchesfrontend Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-	<spring-version>4.3.7.RELEASE</spring-version>
-	<servlet-version>3.0.1</servlet-version>
-	<failOnMissingWebXml>false</failOnMissingWebXml>
-	<!-- <maven.compiler.source>1.8</maven.compiler.source>
-	<maven.compiler.target>1.8</maven.compiler.target>
- -->	</properties>
+		<spring-version>4.3.7.RELEASE</spring-version>
+		<servlet-version>3.0.1</servlet-version>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+		<!-- <maven.compiler.source>1.8</maven.compiler.source> <maven.compiler.target>1.8</maven.compiler.target> -->
+	</properties>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 		<dependency>
@@ -22,11 +21,11 @@
 			<version>${servlet-version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
-<dependency>
-    <groupId>jstl</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -40,12 +39,16 @@
 			<version>${spring-version}</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-core</artifactId>
-    <version>${spring-version}</version>
-</dependency>
-		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>com.niit</groupId>
+			<artifactId>watchesbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency> -->
 	</dependencies>
 	<build>
 		<finalName>watchesfrontend</finalName>

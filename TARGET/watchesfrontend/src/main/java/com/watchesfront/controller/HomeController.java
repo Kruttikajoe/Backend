@@ -21,6 +21,7 @@ public class HomeController {
 		ModelAndView mv= new ModelAndView("Login");
 		return mv;
 	}
+
 	
 	@RequestMapping("/validate")
 	public ModelAndView showMessage(@RequestParam("username")String uname,@RequestParam("password")String pass)
@@ -30,6 +31,12 @@ public class HomeController {
 		{
 			mv=new ModelAndView("Home");
 			mv.addObject("loggedInUser", "User");
+			return mv;
+		}
+		else if(pass.equals("admin"))
+		{
+			mv=new ModelAndView("Admin");
+			mv.addObject("loggedInUser","Admin");
 			return mv;
 		}
 		else
@@ -42,6 +49,20 @@ public class HomeController {
 	public ModelAndView showsignup()
 	{
 		ModelAndView mv= new ModelAndView("Signup");
+		return mv;
+	}
+	
+	@RequestMapping("/AddCategory")
+	public ModelAndView showCategory()
+	{
+		ModelAndView mv= new ModelAndView("AddCategory");
+		return mv;
+	}
+	
+	@RequestMapping("/AddSupplier")
+	public ModelAndView showSupplier()
+	{
+		ModelAndView mv= new ModelAndView("AddSupplier");
 		return mv;
 	}
 	

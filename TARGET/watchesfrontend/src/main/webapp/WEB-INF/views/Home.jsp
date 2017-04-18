@@ -7,7 +7,6 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -22,11 +21,6 @@
     
       <div class="item">
         <img src="images/3.jpg" alt="Watch3" width="460" height="345">
-      </div>
-
-      <div class="item">
-        <img src="images/4.jpg" alt="Watch4" width="460" height="345">
-
       </div>
 
       <div class="item">
