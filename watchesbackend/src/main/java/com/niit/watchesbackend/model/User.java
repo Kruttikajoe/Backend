@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name = "user")
+//@Table(name = "user")
 @Component
 public class User {
 	@Id
